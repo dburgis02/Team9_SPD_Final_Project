@@ -887,7 +887,7 @@ def reserve_item(item_id):
             try:
                 conn.execute('''
                                    INSERT INTO reservations 
-                                   (resource_id, user_id, start_date, end_date, status, created_at)
+                                   (resource_id, user_id, start_date, end_date, status, timestamp)
                                    VALUES (?, ?, ?, ?, 'approved', ?)
                                ''', (
                     item_id,
